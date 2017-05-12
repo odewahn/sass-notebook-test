@@ -31,6 +31,8 @@ RUN conda config --add channels r && \
     'r-crayon=1.3*' \
     'r-randomforest=4.6*' && conda clean -tipsy
 
+RUN conda install --quiet --yes rpy2
+
 # Launchbot labels
 LABEL name.launchbot.io="sass-notebook-test"
 LABEL workdir.launchbot.io="/usr/workdir"
